@@ -25,11 +25,7 @@ public class StudentServiceImpl extends ServiceImpl<StudentMapper, Student> impl
     @Autowired
     private StudentMapper studentMapper;
 
-    @Override
-    public List<Student> findByName(String name) {
-        Wrapper<Student> wrapper = Wrappers.<Student>lambdaQuery().like(Student::getUsername, name);
-        return studentMapper.selectList(wrapper);
-    }
+
 
     @Override
     public List<Student> findByNameUseMapper(String name) {

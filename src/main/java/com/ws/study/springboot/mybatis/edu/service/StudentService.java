@@ -15,7 +15,6 @@ import java.util.List;
  */
 public interface StudentService extends IService<Student> {
 
-    List<Student> findByName(String name);
 
     List<Student> findByNameUseMapper(String name);
 }
